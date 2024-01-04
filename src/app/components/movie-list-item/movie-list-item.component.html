@@ -1,0 +1,11 @@
+<div class="movie-card">
+  <img class="image" src="{{getFullImageUrl(movie.poster_path)}}" alt="{{movie.title}}">
+  <div class="movie-content">
+    <h2 class="movie-title">{{movie.title}}</h2>
+    <h3>{{movie.overview}}</h3>
+    <p>Released on: {{movie.release_date}}</p>
+    <app-button
+    (click)="goToMovie(movie)"
+    [text]="'View More...'"></app-button>
+  </div>
+</div>

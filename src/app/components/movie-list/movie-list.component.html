@@ -1,0 +1,13 @@
+<ul
+infiniteScroll
+[infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="500"
+(scrolled)="onScroll()"
+>
+<li *ngFor="let movie of searchResults">
+  <app-movie-list-item
+    [movie]="movie"
+    [baseImageUrl]="baseImageUrl"
+  ></app-movie-list-item>
+</li>
+</ul>

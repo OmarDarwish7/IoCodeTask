@@ -1,0 +1,17 @@
+<!-- movie-detail.component.html -->
+<div class="container" *ngIf="movie">
+  <div class="movie-details">
+    <h1>{{ movie.title }}</h1>
+    <div>
+      <img src="{{ getFullImageUrl(movie.poster_path) }}" alt="{{ movie.title }} Poster">
+    </div>
+    <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
+    <p><strong>Overview:</strong> {{ movie.overview }}</p>
+    <p><strong>Vote Average:</strong> {{ movie.vote_average }}</p>
+    <app-button
+      (click)="exportToExcel()"
+      [text]="'Export to Excel'"
+     ></app-button>
+    <!-- Add more details as needed -->
+  </div>
+</div>

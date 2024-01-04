@@ -1,0 +1,13 @@
+<div class="centered-div">
+  <!-- Search Component -->
+  <app-search-component class="example-full-width centered-div" (searchEvent)="submitSearch($event)"></app-search-component>
+  <app-movie-list
+     [searchResults]="searchResults"
+     (onScrollEvent)="onScroll()"
+    [baseImageUrl]="this.baseImageUrl"
+     ></app-movie-list>
+  <h1 class="h1-message" *ngIf="notSearched">SEARCH YOUR FAVORITE MOVIES!</h1>
+  <h1 class="h1-message" *ngIf="emptyResults">NO RESULTS FOUND</h1>
+  </div>
+  <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+<router-outlet></router-outlet>

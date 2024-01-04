@@ -1,0 +1,22 @@
+<div class="card">
+  <h1 class="title">The Movie Database</h1>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search</mat-label>
+    <input class="search-box"
+          type="text"
+          placeholder="Enter movie name..."
+          aria-label="Search"
+          matInput
+          [formControl]="myControl"
+          [matAutocomplete]="auto"
+          (keyup.enter)="submitSearch()">
+    <button class="search-button" mat-icon-button matSuffix (click)="submitSearch()">
+      <mat-icon>search</mat-icon>
+    </button>
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
