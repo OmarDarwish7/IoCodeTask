@@ -14,7 +14,7 @@
       -  The app module which is the root module that contains all module imports.
     - The services :
       - The app service which contains useful shared logic that is used by the components.
-      -The web service which is responsible for sending the http requests for the api calls, it holds the root url and gets passed the type of request and the extension to send the request.
+      - The web service which is responsible for sending the http requests for the api calls, it holds the root url and gets passed the type of request and the extension to send the request.
     - The pages are divided into :
       - Search Page, which consists of:
         - app-search-component which is the search card component.
