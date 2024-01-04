@@ -28,7 +28,7 @@
 
         
 ## Tools used:
-  Various tools and libraries were used in this project to achieve the list of requirements these tools consist of:
+  - Various tools and libraries were used in this project to achieve the list of requirements these tools consist of:
     - Angular Material:
       Multiple elements that are used in this page are essentially angular material elements, such as :
         - mat-form-field
